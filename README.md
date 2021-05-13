@@ -16,9 +16,7 @@ It's free!
 **Cloning the Repository**
 
 ```
-$ git clone https://github.com/devlucascardoso/NLW5-Trilha_NodeJS
-
-$ cd NLW5-Trilha_NodeJS
+$ git clone https://github.com/devlucascardoso/NLW5-Trilha_NodeJS && cd NLW5-Trilha_NodeJS
 ```
 
 **Installing dependencies**
