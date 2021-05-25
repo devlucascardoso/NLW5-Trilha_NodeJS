@@ -1,42 +1,63 @@
-import { MigrationInterface, QueryRunner, Table } from "typeorm";
+import {
+  MigrationInterface,
+  QueryRunner,
+  Table,
+  TableForeignKey,
+} from "typeorm";
 
-export class CreateSettings1621445716447 implements MigrationInterface {
+export class CreateConnections1619125714878 implements MigrationInterface {
+  public async up(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.createTable(
+      new Table({
+        name: "connections",
+        columns: [
+          {
+            name: "id",
+            type: "uuid",
+            isPrimary: true,
+          },
+          {
+            name: "admin_id",
+            type: "uuid",
+            isNullable: true,
+          },
+          {
+            name: "user_id",
+            type: "uuid",
+          },
+          {
+            name: "socket_id",
+            type: "varchar",
+          },
+          {
+            name: "created_at",
+            type: "timestamp",
+            default: "now()",
+          },
+          {
+            name: "updated_at",
+            type: "timestamp",
+            default: "now()",
+          },
+        ],
+      })
+    );
 
-    public async up(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.createTable(
-            new Table({
-                name: "settings",
-                columns: [
-                    {
-                        name: "id",
-                        type: "uuid",
-                        isPrimary: true,
-                    },
-                    {
-                        name: "username",
-                        type: "varchar",
-                    },
-                    {
-                        name: "chat",
-                        type: "boolean",
-                        default: true,
-                    },
-                    {
-                        name: "update_at",
-                        type: "timestamp",
-                        default: "now()",
-                    },
-                    {
-                        name: "created_at",
-                        type: "timestamp",
-                        default: "now()",
-                    },
-                ],
-            })
-        );
-    }
+    await queryRunner.createForeignKey(
+      "connections",
+      new TableForeignKey({
+        name: "FKConnectionUser",
+        referencedTableName: "users",
+        referencedColumnNames: ["id"],
+        columnNames: ["user_id"],
+        onDelete: "SET NULL",
+        onUpdate: "SET NULL",
+      })
+    );
+  }
 
-    public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropTable("settings");
-    }
+  public async down(queryRunner: QueryRunner): Promise<void> {
+    await queryRunner.dropForeignKey("connections", "FKConnectionUser");
+    await queryRunner.dropTable("connections");
+  }
 }
