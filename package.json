@@ -1,4 +1,3 @@
-#Lucas_Cardoso
 {
   "name": "support-chat-nlw5",
   "version": "1.0.0",
@@ -6,9 +5,7 @@
   "repository": "https://github.com/devlucascardoso/NLW5-Trilha_NodeJS",
   "author": "Lucas Cardoso <lucascardoso946@gmail.com>",
   "license": "MIT",
-  }
-
- "scripts": {
+  "scripts": {
     "dev": "ts-node-dev src/server.ts",
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js"
   },
