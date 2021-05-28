@@ -1,4 +1,4 @@
-# Support-chat!
+# Support-chat
 
 ![projetoON](https://user-images.githubusercontent.com/83316119/119446368-b2aaf800-bd04-11eb-92b6-257ac45a3f3c.PNG)
 
