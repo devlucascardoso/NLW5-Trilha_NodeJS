@@ -19,14 +19,14 @@ It's free!
 ### Prerequisites
 
 To run this project in the development mode, you'll need to have a basic environment to run a NodeJS, that can be found [here](https://nodejs.org/en/docs/guides/getting-started-guide/).
-Also, you'll need to the server running locally on your machine with the mock data. You can find the server and all the instructions to start the server [here](https://github.com/devlucascardoso/NLW5-Trilha_NodeJS/blob/main/README.md).
+Also, you'll need to the server running locally on your machine with the mock data. You can find the server and all the instructions to start the server [here](https://github.com/devlucascardoso/support-chat-live/blob/main/README.md).
 
 ### Downloading and Installing
 
 **Cloning the Repository**
 
 ```
-$ git clone https://github.com/devlucascardoso/NLW5-Trilha_NodeJS && cd NLW5-Trilha_NodeJS
+$ git clone https://github.com/devlucascardoso/support-chat-live && cd support-chat-live
 ```
 
 **Installing dependencies**
@@ -66,4 +66,4 @@ $ npm run dev
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/devlucascardoso/NLW5-Trilha_NodeJS/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/devlucascardoso/support-chat-live/blob/master/LICENSE) file for details
